@@ -1,4 +1,4 @@
-# Module Virtualisation & Cloud Computing
+# Virtualisation & Cloud Computing
 Regroupe les travaux dirigés et les sujets de projets pour le module de Viratualisation & Cloud Computing
 
 ## Cours magistraux
