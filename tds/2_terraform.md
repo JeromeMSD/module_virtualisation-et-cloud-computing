@@ -89,6 +89,8 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 > terraform import '<resource_type>.<resource_name>' <resource_id>
 > ```
 
+---
+
 ## Manipuler Terraform
 
 Créer dans votre de dépôt de code, dans votre dossier `TD`, un dossier `2_terraform` dans lequel vous placerez les fichiers issues de cet exercice **ainsi qu'un `README.md` contenant les résultats de vos `terraform plan`.**
