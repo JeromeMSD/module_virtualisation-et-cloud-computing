@@ -114,6 +114,8 @@ graph LR
     VM <--> DB
 ```
 
+Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM.
+
 > [!IMPORTANT]
 > La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
 
