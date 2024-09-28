@@ -166,7 +166,11 @@ Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploie
 > [!IMPORTANT]
 > La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
 
---- 
+### On ne va pas réecrire tout ça pour chacune de nos applications ! 
+
+Créer un module pour chacun des deux providers 🚀
+
+---
 
 Liens utiles: 
 - Documentation [Terraform](https://developer.hashicorp.com/terraform?product_intent=terraform)
