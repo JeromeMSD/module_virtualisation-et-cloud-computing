@@ -81,6 +81,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 | ------------------- | ------------ |
 | `terraform lock` </br> `terraform unlock` | Verrouille ou Déverrouille l'état de Terraform pour prévenir les modifications concurrentes.
 | `terraform import`  | Importe une ressource existante dans Terraform. Cela permet de gérer des ressources créées manuellement ou par d'autres moyens.
+| `terraform output`  | Affiche les outputs spécifiés, `terraform output -json` affiche tout les outputs de la configuration.
 
 > [!note]
 > `terraform import` d'utilise comme ceci
