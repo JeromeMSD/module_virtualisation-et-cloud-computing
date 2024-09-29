@@ -17,11 +17,11 @@ Chaque `terraform apply` executera de façon impérative des actions pour rappro
 
 Via [le tutoriel Hashicorp](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), installer la CLI (Command Line Interface) de `terraform` suivant le système d'exploitation de votre machine ou votre VM.
 
-## Commandes
+### Commandes
 
 Ces commandes principales vous permettrons de manipuler et tester votre state tout au long du TD.
 
-### Commandes Initiales
+#### Commandes Initiales
 
 | Commandes_terraform |  Description |
 | ------------------ | ------------ |
@@ -29,7 +29,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 | `terraform vaidate`  | Vérifie la syntaxe et la validité des fichiers de configuration Terraform dans le répertoire actuel.
 | `terraform fmt`      | Formate les fichiers de configuration Terraform selon les conventions standard, améliore la lisibilité et la cohérence.
 
-### Commandes de Planification et d'Application
+#### Commandes de Planification et d'Application
 
 | Commandes_terraform |  Description |
 | ------------------- | ------------ |
@@ -39,7 +39,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 > [!CAUTION]
 > `terraform apply` : À utiliser avec précaution
 
-### Commandes liées au `state`
+#### Commandes liées au `state`
 
 
 | Commandes_terraform |  Description |
@@ -58,7 +58,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 > terraform state show <resource_type>.<resource_name>
 > ```
 
-### Commandes de Destruction
+#### Commandes de Destruction
 
 > [!CAUTION]
 > À utiliser avec précaution
@@ -67,7 +67,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 | ------------------- | ------------ |
 | `terraform destroy` | **Détruit toutes les ressources gérées par la configuration Terraform.** Cela supprime toute l'infrastructure provisionnée.
 
-### Commandes de Gestion de Modules
+#### Commandes de Gestion de Modules
 
 | Commandes_terraform |  Description |
 | ------------------- | ------------ |
@@ -75,7 +75,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 | `terraform output`  | Affiche les valeurs des sorties (outputs) définies dans les configurations Terraform, ce qui peut être utile pour récupérer des informations sur les ressources provisionnées.
 | `terraform graph`  |  Génère un graphique des ressources Terraform et de leurs dépendances, ce qui peut être utile pour visualiser la structure de l'infrastructure.
 
-### Autres commandes utiles
+#### Autres commandes utiles
 
 | Commandes_terraform |  Description |
 | ------------------- | ------------ |
