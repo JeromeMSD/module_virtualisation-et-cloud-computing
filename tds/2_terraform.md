@@ -135,7 +135,7 @@ Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploie
 > [!important]
 > Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès à l'environment AWS.
 > Ajouter les variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` et `AWS_REGION` au terminal qui execute les commandes Terraform. 
-> ```hcl
+> ```bash
 > export AWS_ACCESS_KEY_ID="access-key-id"
 > export AWS_SECRET_ACCESS_KEY="access-key-secret"
 > export AWS_REGION="eu-west-3"
