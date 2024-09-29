@@ -100,7 +100,7 @@ Créer dans votre de dépôt de code, dans votre dossier `TD`, un dossier `2_ter
 Dans un dossier `foundation-gcp`, en utilisant GCP et Terraform, créer une IaC pour mettre en place l'infrastructure suivante.
 > [!important]
 > Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
-> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student`, ajouter la à la configuration de votre provider :
+> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à la configuration de votre provider :
 > ```hcl
 > provider "google" {
 >     project = var.project_id
