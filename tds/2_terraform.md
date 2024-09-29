@@ -95,12 +95,19 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 
 Créer dans votre de dépôt de code, dans votre dossier `TD`, un dossier `2_terraform` dans lequel vous placerez les fichiers issues de cet exercice **ainsi qu'un `README.md` contenant les résultats de vos `terraform plan`.**
 
-> [!TIP]
-> Utilisez des blocs de code hcl pour la lisibilité.
-
 ### En utilisant GCP
 
 Dans un dossier `foundation-gcp`, en utilisant GCP et Terraform, créer une IaC pour mettre en place l'infrastructure suivante.
+> [!important]
+> Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
+> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student`, ajouter la à la configuration de votre provider :
+> ```hcl
+> provider "google" {
+>     project = var.project_id
+>     credentials = "./student.json"
+>     region  = var.region
+> }
+> ```
 
 ```mermaid
 graph LR
@@ -118,17 +125,27 @@ graph LR
 
 Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM.
 
-> [!IMPORTANT]
+> [!WARNING]
 > La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
 
 ### En utilisant AWS
 
 Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploiement chez AWS.
 
-> [!IMPORTANT]
+> [!important]
+> Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès à l'environment AWS.
+> Ajouter les variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` et `AWS_REGION` au terminal qui execute les commandes Terraform. 
+> ```hcl
+> export AWS_ACCESS_KEY_ID="access-key-id"
+> export AWS_SECRET_ACCESS_KEY="access-key-secret"
+> export AWS_REGION="eu-west-3"
+> ```
+
+> [!WARNING]
 > La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
 
 ## Créer un module pour chacun des deux providers 🚀
+
 On ne va tout de même pas réecrire tout ça pour chacune de nos applications ! 
 
 ---
