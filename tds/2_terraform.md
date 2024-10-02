@@ -116,7 +116,7 @@ graph LR
 La relation entre VM et la base de donnée se fera dans l'application, pas de besoin donc de la spécifier dans la IaC.
 Les deux resources doivent cependant tout de même faire partie du même VPC, pour pouvoir communiquer.
 
-Utiliser [la documentation du provider](https://registry.terraform.io/providers/hashicorp/google/latest) pour choisir et configurer **au minimum** les ressources :
+Utiliser [la documentation du provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) pour choisir et configurer **au minimum** les ressources :
 
 > [!important]
 > A chacune des étapes ci-dessous, la commande `terraform validate` & `terraform plan` doit s'executer sans erreur.
@@ -171,5 +171,5 @@ On ne va tout de même pas réecrire tout ça pour chacune de nos applications !
 
 Liens utiles: 
 - Documentation [Terraform](https://developer.hashicorp.com/terraform?product_intent=terraform)
-- Documentation Terraform: [Google provider](https://registry.terraform.io/providers/hashicorp/google/latest)
-- Documentation Terraform: [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest)
+- Documentation Terraform: [Google provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs)
+- Documentation Terraform: [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
