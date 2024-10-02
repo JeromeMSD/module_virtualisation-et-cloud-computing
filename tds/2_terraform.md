@@ -133,9 +133,9 @@ Utiliser [la documentation du provider](https://registry.terraform.io/providers/
 
 > [!important]
 > Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
-> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à l'environnement:
+> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la via l'environnement:
 > ```
-> export GOOGLE_APPLICATION_CREDDENTIALS="$(cat student.json)"
+> export GOOGLE_APPLICATION_CREDENTIALS="./student.json"
 > echo "**/student.json" >> .gitignore
 > ```
 >
