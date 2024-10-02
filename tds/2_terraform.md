@@ -123,17 +123,23 @@ Utiliser [la documentation du provider](https://registry.terraform.io/providers/
 > Une fois toutes les étapes réalisé, copier/coller le résultat du `terraform plan` dans votre `README.md`.
 
 1. Commencer par configurer un VPC (`google_compute_network`).
-2. Ajouter ensuite une instance de Compute Engine dans ce GCP (`google_compute_instance`).
-3. Ajouter une Base de donnée. (`google_sql_database_instance`).
+2. Ajouter ensuite une instance de Compute Engine dans ce VPC (`google_compute_instance`).
+3. Également dans ce VPC, ajouter une base de donnée. (`google_sql_database_instance`).
 4. Ajouter une entrer DNS (`google_dns_record_set`).
-5. Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM pour atteindre le premier niveau de haute disponibilité.
+5. Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM pour atteindre le premier chiffre de la haute disponibilité.
 
 > [!tip]
 > `google_dns_record_set` nécessite une `managed_zone` utiliser un DNS de votre choix (ex: `example.com`) ou la ressource `google_dns_managed_zone`.
 
 > [!important]
 > Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
-> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à la configuration de votre provider :
+> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à l'environnement:
+> ```
+> export GOOGLE_APPLICATION_CREDDENTIALS="$(cat student.json)"
+> echo "**/student.json" >> .gitignore
+> ```
+>
+> Configurer le provider comme suit:
 > ```hcl
 > provider "google" {
 >     project = var.project_id
