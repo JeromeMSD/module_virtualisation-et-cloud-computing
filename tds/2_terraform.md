@@ -98,16 +98,6 @@ Créer dans votre de dépôt de code, dans votre dossier `TD`, un dossier `2_ter
 ### En utilisant GCP
 
 Dans un dossier `foundation-gcp`, en utilisant GCP et Terraform, créer une IaC pour mettre en place l'infrastructure suivante.
-> [!important]
-> Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
-> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à la configuration de votre provider :
-> ```hcl
-> provider "google" {
->     project = var.project_id
->     credentials = "./student.json"
->     region  = var.region
-> }
-> ```
 
 ```mermaid
 graph LR
@@ -123,14 +113,37 @@ graph LR
     VM <--> DB
 ```
 
-Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM.
+La relation entre VM et la base de donnée se fera dans l'application, pas de besoin donc de la spécifier dans la IaC.
+Les deux resources doivent cependant tout de même faire partie du même VPC, pour pouvoir communiquer.
 
-> [!WARNING]
-> La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
+Utiliser [la documentation du provider](https://registry.terraform.io/providers/hashicorp/google/latest) pour choisir et configurer **au minimum** les ressources :
+
+> [!important]
+> A chacune des étapes ci-dessous, la commande `terraform validate` & `terraform plan` doit s'executer sans erreur.
+> Une fois toutes les étapes réalisé, copier/coller le résultat du `terraform plan` dans votre `README.md`.
+
+1. Commencer par configurer un VPC (`google_compute_network`).
+2. Ajouter ensuite une instance de Compute Engine dans ce GCP (`google_compute_instance`).
+3. Ajouter une Base de donnée. (`google_sql_database_instance`).
+4. Ajouter une entrer DNS (`google_dns_record_set`).
+5. Ajouter un meta-argument pour permettre de déployer plusieurs instances de la VM pour atteindre le premier niveau de haute disponibilité.
+
+> [!tip]
+> `google_dns_record_set` nécessite une `managed_zone` utiliser un DNS de votre choix (ex: `example.com`) ou la ressource `google_dns_managed_zone`.
+
+> [!important]
+> Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
+> Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la à la configuration de votre provider :
+> ```hcl
+> provider "google" {
+>     project = var.project_id
+>     region  = var.region
+> }
+> ```
 
 ### En utilisant AWS
 
-Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploiement chez AWS.
+Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploiement chez AWS. Vous choisirez les ressources les plus adaptées dans la 
 
 > [!important]
 > Pour pouvoir effectuer le terraform plan, vous aurez besoin d'un compte de service qui à accès à l'environment AWS.
