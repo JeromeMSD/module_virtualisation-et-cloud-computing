@@ -44,7 +44,7 @@ Conteneuriser un serveur web simple. Dans un dossier `frontend`, exécuter les a
 > **Informations clés :** On cherche à déployer un conteneur qui execute notre image en redirigeant le port `8080`
 > de notre machine sur le port d'exposition du conteneur `80`. (le nom de l'image doit être le dernier argument de la commande)
 
-8. Dans votre navigateur préféré, rendez-vous sur [https://localhost:8080](https://localhost:8080).
+8. Dans votre navigateur préféré, rendez-vous sur [http://localhost:8080](http://localhost:8080).
 
 > [!important]
 > **Félicitation !** Vous venez (peut être) de déployé votre premier site web conteneurisé ! 🚀
@@ -72,7 +72,7 @@ Les images `Debian` et `Ubuntu` n'ont pas de commande par défaut, nous utiliser
 
 **Pourquoi n'avons-nous pas utilisé `EXPOSE` ?**
 
-Construire l'image avec le tag `toolbox`.
+Construire l'image avec le tag `toolbox` et le nom `toolbox-ctn`.
 
 ### Utiliser ce conteneur
 
@@ -80,7 +80,7 @@ Construire l'image avec le tag `toolbox`.
 2. Dans un second terminal, connectez-vous au conteneur via `docker exec` :
 
    ```shell
-   docker exec -it toolbox /bin/bash
+   docker exec -it <ctn-id ou ctn-name> /bin/bash
    ```
 
 3. Tester les différentes outils installés. Ensuite, installer `curl`.
@@ -88,8 +88,11 @@ Construire l'image avec le tag `toolbox`.
 5. Revener dans le second terminal et exécuter la commande :
 
     ```shell
-    curl http://localhost:8080
+    curl http://<IP-host>:8080
     ```
+
+> [!important]
+> Utiliser l'IP de l'interface réseau dédiée à `docker` (à récuéperer avec `ip -4 addr show` ou `ipconfig` suivant votre OS)
 
 **Que constatez-vous ?**
 
