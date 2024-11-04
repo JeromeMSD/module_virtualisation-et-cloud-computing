@@ -24,7 +24,7 @@ Un cluster Kubernetes a été mis en place pour les TDs. Utiliser le fichier fou
 > [!caution]
 > Merci de ne pas partager le fichier qui permet la connexion au cluster sur internet.
 
-Copiez le contenu du fichier et ouvrez votre terminal pour configurer l'accès.
+**Copiez** le contenu du fichier et ouvrez votre terminal pour configurer l'accès.
 
 1. Rendez-vous dans votre `HOME`
 
@@ -37,6 +37,8 @@ Copiez le contenu du fichier et ouvrez votre terminal pour configurer l'accès.
   ```shell
   mkdir .kube && vim .kube/kubeconfig
   ```
+
+3. **Coller** le contenu du fichier dans ce `kubeconfig` et sauvegarder le fichier.
 
   > *`Esc` + `:wq` pour quitter `vim` en sauvegardant le fichier*
 
