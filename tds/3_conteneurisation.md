@@ -6,7 +6,7 @@ Parmis les outils qui nous permettent de créer des conteneurs, le plus populair
 
 ## Une impression de déjà vu
 
-Conteneuriser un serveur web simple. Dans une dossier `frontend`, exécuter les actions suivantes :
+Conteneuriser un serveur web simple. Dans un dossier `frontend`, exécuter les actions suivantes :
 
 1. Dans un premier temps, créer une page web simple (HTML/CSS) dans un fichier `index.html`.
 
