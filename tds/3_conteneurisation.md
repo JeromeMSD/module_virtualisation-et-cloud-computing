@@ -122,7 +122,7 @@ Construire l'image avec le tag `toolbox`.
 Dans vos projets Cloud, vous serez heureux de ne pas reconstruire la même image à chaque fois, ou tout simplement d'éviter de les perdre dans un malheureux crash de votre ordinateur
 Pour stocker les images, les organisations ont recours à des **registres**.
 
-> [TIP]
+> [!TIP]
 > Un registre, ou *registry* c'est une sorte de biblithèque qui permet de stocker différentes images dans chacune de leurs versions.
 
 Pour pousser une image sur un dépôt, il faut lui attribuer le bon tag. Cette étiquette définira où l'image va être envoyée.
