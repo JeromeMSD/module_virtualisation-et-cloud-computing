@@ -49,7 +49,7 @@ Conteneuriser un serveur web simple. Dans une dossier `frontend`, exécuter les 
 > [!important]
 > **Félicitation !** Vous venez (peut être) de déployé votre premier site web conteneurisé ! 🚀
 
-9.  Modifier le contenu de votre de fichier `index.html` et redéployer votre conteneur à nouveau le conteneur.
+9.  Modifier le contenu de votre de fichier `index.html` et redéployer à nouveau le conteneur.
 
 **Que pouvez-vous observer ?**
 
