@@ -40,9 +40,9 @@ Un cluster Kubernetes a été mis en place pour les TDs. Utiliser le fichier fou
 
 3. **Coller** le contenu du fichier dans ce `config` et sauvegarder le fichier.
 
-  > *`Esc` + `:wq` pour quitter `vim` en sauvegardant le fichier*
+    > *`Esc` + `:wq` pour quitter `vim` en sauvegardant le fichier*
 
-3. Vérifier le fichier et son contenu :
+4. Vérifier le fichier et son contenu :
 
    ```shell
     ls -la .kube
@@ -190,7 +190,7 @@ Sauvegarder le manifeste dans un fichier `replicaset.yaml` et appliquez le au cl
 Observer le déploiement et la charge de travail déployée par ce déploiement:
 
 ```shell
-# Observer le déploiement
+# Observer le replicaset
 kubectl get replicaset
 kubectl describe replicaset
 
