@@ -32,13 +32,13 @@ Un cluster Kubernetes a été mis en place pour les TDs. Utiliser le fichier fou
   cd
   ```
 
-2. Créer un dossier `.kube` et créer dans ce dossier un fichier `kubeconfig` avec votre éditeur préféré.
+2. Créer un dossier `.kube` et créer dans ce dossier un fichier `config` avec votre éditeur préféré.
 
   ```shell
-  mkdir .kube && vim .kube/kubeconfig
+  mkdir .kube && vim .kube/config
   ```
 
-3. **Coller** le contenu du fichier dans ce `kubeconfig` et sauvegarder le fichier.
+3. **Coller** le contenu du fichier dans ce `config` et sauvegarder le fichier.
 
   > *`Esc` + `:wq` pour quitter `vim` en sauvegardant le fichier*
 
@@ -46,14 +46,14 @@ Un cluster Kubernetes a été mis en place pour les TDs. Utiliser le fichier fou
 
    ```shell
     ls -la .kube
-    cat .kube/kubeconfig
+    cat .kube/config
    ```
 
 > [!note]
 > Le fichier que vous venez de créer contient la configuration (adresse + identifiants) pour se connecter à un cluster GKE ([Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine?hl=fr)).
 > Nous le mettons dans ce dossier car c'est l'emplacement par défaut où `kubectl` va aller récuperer sa configuration.
 >
-> *Alternative :* On peut également passer un fichier `kubeconfig` à `kubectl` directement via l'option `--kubeconfig`.
+> *Alternative :* On peut également passer un fichier `config` à `kubectl` directement via l'option `--kubeconfig`.
 
 ### Se créer un espace sur le cluster
 
