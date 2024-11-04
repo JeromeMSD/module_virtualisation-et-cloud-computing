@@ -149,7 +149,7 @@ Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de v
 3. Configurer `docker` directement avec `gcloud` :
 
     ```shell
-    gcloud auth configure-docker
+    gcloud auth configure-docker europe-west1-docker.pkg.dev
     ```
 
 4. Maintenant que vous êtes authentifié, rendez-vous dans le dossier frontend.
