@@ -95,12 +95,10 @@ Désormais si vous exécutez une commande `kubectl`, celle-ci sera exécutée pa
 
 ### Une charge de travail = un Pod
 
-Vous vous souvenez de votre magnifique frontend ? Nous allons déployer dans le cluster Kubernetes.
-
 À partir de la définition vue en cours et de la documentation de [Kubernetes sur la ressource Pod](https://kubernetes.io/docs/concepts/workloads/pods/), créer un pod dans votre namespace.
 
-> [!tip]
-> **Rappel** - L'image de votre frontend ressemble à `europe-west1-docker.pkg.dev/esirem/esirem/frontend-2024:nom1-nom2`
+> [!note]
+> **Rappel** - L'image a déployer est `gcr.io/kuar-demo/kuard-amd64:blue`
 
 Voici un template pour vous aider :
 
