@@ -76,8 +76,8 @@ kubectl create namespace <prenom>
 ```shell
 kubectl get ns
 kubectl get ns <prenom>
-kubectl describe <prenom>
-kubectl get <prenom> -o yaml
+kubectl describe ns <prenom>
+kubectl get ns <prenom> -o yaml
 ```
 
 3. Exécuter la commande suivante pour definir votre `namespace` comme espace de nom par défaut.
