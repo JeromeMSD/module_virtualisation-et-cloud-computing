@@ -130,7 +130,7 @@ kubectl get pod
 kubectl describe pod
 ```
 
-**Votre frontend est déployé dans le cluster, mais comment y accéder ?**
+**Comment y accéder au conteneur dans le Pod?**
 
 Avant d'utiliser une ressource de type `Service`, nous allons utiliser un tunnel HTTP via la commande `kubectl port-forward` (cf. [Documentation](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)).
 
@@ -243,6 +243,8 @@ Dans votre navigateur préféré, rendez-vous sur [http://localhost:<port-hôte>
 **Schématisez dans un nouveau schéma, la communication entre votre navigateur et l'application.**
 
 ### Passons aux choses sérieuses
+
+
 
 Nous allons écrire le fichier et réaliser les commandes nécéssaire à la réalisation l'architecture suivante :
 
