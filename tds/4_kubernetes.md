@@ -194,7 +194,7 @@ kubectl describe replicaset
 
 # Observer les pods
 kubectl get pod
-kubectl describe <nom-du-pod>
+kubectl describe pod <nom-du-pod>
 ```
 
 Nous allons maintenant supprimer le pod déployé.
