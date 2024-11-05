@@ -165,6 +165,9 @@ Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de v
     docker push europe-west1-docker.pkg.dev/esirem/esirem/frontend-2024:nom1-nom2
     ```
 
+> [!note]
+> Les commandes doivent être executé dans le même terminal.
+
 > [!tip]
 > **C'est terminé !** 🚀
 >
