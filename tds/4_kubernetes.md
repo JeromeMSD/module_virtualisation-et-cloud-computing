@@ -244,7 +244,7 @@ Dans votre navigateur préféré, rendez-vous sur [http://localhost:<port-hôte>
 
 ### Liveness Probe
 
-Créez un pod kuard avec une liveness probe, puis testez le comportement de Kubernetes en cas de défaillance de la probe.
+Créez un nouveau pod kuard mais avec une liveness probe, puis testez le comportement de Kubernetes en cas de défaillance de la probe.
 
 1. Ajouter le paramêtre `livenessProbe` aux attributs du conteneur de votre pod `kuard`:
 
@@ -264,6 +264,28 @@ livenessProbe:
 3. Dans un autre terminal, utilisez `port-forward` pour vous connecter au dashboard via un navigateur : accédez à [`http://localhost:8080`](http://localhost:8080), dans l'onglet liveness, changez le code de retour de la liveness probe et observez le résultat dans Kubernetes et dans kuard (via le terminal).
 
 **Que se passe-t-il ?**
+
+## Requests & Limits
+
+Nous allons maintenant limiter les resources de l'application `kuard` en spécifiant des `requests` & `limits` adaptées.
+
+1. Au même niveau que le bloc `livenessProbe`, déclarer un bloc `resources` avec les requests et limits suivantes
+
+```yaml
+resources:
+  requests:
+    cpu: "50m"
+    memory: "128Mi"
+  limits:
+    cpu: "50m"
+    memory: "128Mi"
+```
+
+**Quelle est la qualité de service de votre pod (QoS) ? Comment peut-on en être sûr (trouver via kubectl le paramètre qui contient cette information)**
+
+2. Appliquer le pod au cluster.
+
+3. Accédez au pod kuard sur [`http://localhost:8080`](http://localhost:8080), dans l'onglez memory, allouez de la mémoire jusqu'à dépasser la limite. Que constatez vous dans kuard et dans Kubernetes ?
 
 ---
 
@@ -332,5 +354,7 @@ Pour faciliter votre utilisation de `kubectl`, vous pouvez :
 * [Kubernetes Service](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 * [Kubernetes ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 * [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+* [Kubernetes Liveness Probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+* [Kubernetes containers resource management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 * [kubectl Cheat Sheet](https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/)
 * [Excalidraw](https://excalidraw.com/) & [Draw.io](https://draw.io/) pour les schémas. *(ou directement dans le readme via `mermaid` si vous êtes chaud)*
