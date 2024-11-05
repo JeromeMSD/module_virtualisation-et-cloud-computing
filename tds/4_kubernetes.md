@@ -242,9 +242,32 @@ Dans votre navigateur préféré, rendez-vous sur [http://localhost:<port-hôte>
 
 **Schématisez dans un nouveau schéma, la communication entre votre navigateur et l'application.**
 
+### Liveness Probe
+
+Créez un pod kuard avec une liveness probe, puis testez le comportement de Kubernetes en cas de défaillance de la probe.
+
+1. Ajouter le paramêtre `livenessProbe` aux attributs du conteneur de votre pod `kuard`:
+
+```yaml
+livenessProbe:
+  httpGet:
+    path: /healthy
+    port: 8080
+  initialDelaySeconds: 5
+  timeoutSeconds: 1
+  periodSeconds: 10
+  failureThreshold: 3
+```
+
+2. Une fois le pod démarré, exécutez `kubectl get pods -w` afin de surveiller les changements d'état du pod (ne tuez pas la commande).
+
+3. Dans un autre terminal, utilisez `port-forward` pour vous connecter au dashboard via un navigateur : accédez à [`http://localhost:8080`](http://localhost:8080), dans l'onglet liveness, changez le code de retour de la liveness probe et observez le résultat dans Kubernetes et dans kuard (via le terminal).
+
+**Que se passe-t-il ?**
+
+---
+
 ### Passons aux choses sérieuses
-
-
 
 Nous allons écrire le fichier et réaliser les commandes nécéssaire à la réalisation l'architecture suivante :
 
@@ -253,18 +276,19 @@ graph LR
     subgraph "Votre Namespace"
     direction LR
     subgraph dep["replicaset"]
-    subgraph graph["Pod"]
+    subgraph graph["Pod front"]
       direction LR
-      nginx-ctn -.-> api-ctn 
+      nginx-ctn
     end
-    subgraph graph2[Pod]
+    subgraph graph2[Pod back]
       direction LR
-      ctn21[nginx-ctn] -.-> ctn22[api-ctn]
+      api-ctn
     end
     end
       A(["Service 
           app"]) 
       
+      ctn21[nginx-ctn] -.-> ctn22[api-ctn]
       A --> nginx-ctn
       A --> ctn21
     end
@@ -272,12 +296,12 @@ graph LR
 
 Pour le namespace, pas d'inquiétude, c'est votre namespace par défault. À partir des templates et commandes vues précédement, réaliser :
 
-Le `replicaset` nommé "app" qui déploie **deux instances** d'une charge de travail (`Pod`) **à deux conteneurs** :
+Deux `replicasets` nommé "app-front" et app-back qui déploie **une instances** d'une charge de travail (`Pod`) :
 
-* Le premier conteneur se nomme `nginx-ctn`, exécute l'image `nginx:latest` et est ouvert sur le port `8080`
-* Le deuxième conteneur se nomme `api-ctn`, exécute l'image `alpine:latest` et est ouvert sur le port `3000`
+* Le conteneur de `app-front` se nomme `nginx-ctn`, exécute l'image `nginx:latest` et est ouvert sur le port `8080`
+* Le conteneur de `app-back` se nomme `api-ctn`, exécute l'image `alpine:latest` et est ouvert sur le port `3000`
 
-Exposer le conteneur nginx du déploiement via la commande :
+Exposer les conteneurs nginx du déploiement via la commande :
 
 ```shell
 kubectl expose replicaset app --target-port=8080
