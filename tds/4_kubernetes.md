@@ -141,7 +141,7 @@ Voici comment se présente la commande :
 kubectl port-forward <nom-du-pod> <port-hôte>:<port-conteneur>
 ```
 
-Laisser la commande s'exécuter et dans votre navigateur préféré, rendez-vous sur [https://localhost:<port-hôte>](https://localhost:<port-hôte>).
+Laisser la commande s'exécuter et dans votre navigateur préféré, rendez-vous sur [http://localhost:<port-hôte>](http://localhost:<port-hôte>).
 
 **À partir de la documentation et de vos tests, schématisez la communication entre votre navigateur et l'application.**
 
@@ -238,7 +238,7 @@ Maintenant, réaliser la commande `kubectl port-forward` mais sur le service cet
 kubectl port-forward svc/<nom-du-svc> <port-hôte>:<port-conteneur>
 ```
 
-Dans votre navigateur préféré, rendez-vous sur [https://localhost:<port-hôte>](https://localhost:<port-hôte>).
+Dans votre navigateur préféré, rendez-vous sur [http://localhost:<port-hôte>](http://localhost:<port-hôte>).
 
 **Schématisez dans un nouveau schéma, la communication entre votre navigateur et l'application.**
 
