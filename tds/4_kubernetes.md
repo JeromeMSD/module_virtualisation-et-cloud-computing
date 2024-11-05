@@ -98,7 +98,7 @@ Désormais si vous exécutez une commande `kubectl`, celle-ci sera exécutée pa
 À partir de la définition vue en cours et de la documentation de [Kubernetes sur la ressource Pod](https://kubernetes.io/docs/concepts/workloads/pods/), créer un pod dans votre namespace.
 
 > [!note]
-> **Rappel** - L'image a déployer est `gcr.io/kuar-demo/kuard-amd64:blue`
+> **Rappel** - L'image a déployer est `gcr.io/kuar-demo/kuard-amd64:blue` qui répond au requête sur le port `8080` (et non `80` comme nginx)
 
 Voici un template pour vous aider :
 
