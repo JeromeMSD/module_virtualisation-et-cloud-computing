@@ -287,50 +287,6 @@ resources:
 
 3. Accédez au pod kuard sur [`http://localhost:8080`](http://localhost:8080), dans l'onglez memory, allouez de la mémoire jusqu'à dépasser la limite. Que constatez vous dans kuard et dans Kubernetes ?
 
----
-
-### Passons aux choses sérieuses
-
-Nous allons écrire le fichier et réaliser les commandes nécéssaire à la réalisation l'architecture suivante :
-
-```mermaid
-graph LR
-    subgraph "Votre Namespace"
-    direction LR
-    subgraph dep["replicaset"]
-    subgraph graph["Pod front"]
-      direction LR
-      nginx-ctn
-    end
-    subgraph graph2[Pod back]
-      direction LR
-      api-ctn
-    end
-    end
-      A(["Service 
-          app"]) 
-      
-      ctn21[nginx-ctn] -.-> ctn22[api-ctn]
-      A --> nginx-ctn
-      A --> ctn21
-    end
-```
-
-Pour le namespace, pas d'inquiétude, c'est votre namespace par défault. À partir des templates et commandes vues précédement, réaliser :
-
-Deux `replicasets` nommé "app-front" et app-back qui déploie **une instances** d'une charge de travail (`Pod`) :
-
-* Le conteneur de `app-front` se nomme `nginx-ctn`, exécute l'image `nginx:latest` et est ouvert sur le port `8080`
-* Le conteneur de `app-back` se nomme `api-ctn`, exécute l'image `alpine:latest` et est ouvert sur le port `3000`
-
-Exposer les conteneurs nginx du déploiement via la commande :
-
-```shell
-kubectl expose replicaset app --target-port=8080
-```
-
-**Comment implémenter la relation entre `nginx-ctn` et `api-ctn` ?**
-
 > [!IMPORTANT]
 > Concervez ces fichiers dans votre dépôt dans un sous-dossier `kubernetes`
 
