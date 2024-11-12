@@ -117,9 +117,9 @@ graph LR
   lbB["LoadBalancer
         (development)"]  --> k8s
   dns1(["DNS
-        calculatrice-dev.polytech-dijon.kiowy.net"]) --> lbA
+        calculatrice-dev.polytech-dijon.kiowy.net"]) --> lbB
   dns2(["DNS
-        calculatrice.polytech-dijon.kiowy.net"]) --> lbB
+        calculatrice.polytech-dijon.kiowy.net"]) --> lbA
   k8s --> db["Base de données
               (production)"]
   k8s --> reg[registre de conteneur]
