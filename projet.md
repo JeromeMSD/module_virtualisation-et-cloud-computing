@@ -180,15 +180,17 @@ Une fois la configuration déployée, accéder à votre nom de domaine via un na
     svc-api([svc-api]) --> pod-api
     svc-redis([svc-redis]) --> pod-redis
     svc-rabbitmq([svc-rabbitmq]) --> pod-rabbitmq
-    pod-consumer --> svc-rabbitmq
-    pod-consumer --> svc-redis
-    pod-front --> svc-api
-    pod-api --> svc-redis
-    pod-api --> svc-rabbitmq
+    pod-consumer -.-> svc-rabbitmq
+    pod-consumer -.-> svc-redis
+    pod-front -.-> svc-api
+    pod-api -.-> svc-redis
+    pod-api -.-> svc-rabbitmq
     ing(Ingress rule) --> svc-front
     end
     end
 ```
+
+> Les liens en pointillés ne sont pas à décrire de façon explicite dans la configuration Kubernetes, mais seront à coder dans les applications.
 
 Cette section est terminée si vous accédez à votre application en utilisant l'URL `calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net` dans votre navigateur.
 
