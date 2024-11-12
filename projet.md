@@ -190,7 +190,7 @@ Une fois la configuration déployée, accéder à votre nom de domaine via un na
     end
 ```
 
-> Les liens en pointillés ne sont pas à décrire de façon explicite dans la configuration Kubernetes, mais seront à coder dans les applications.
+**Les liens en pointillés ne sont pas à décrire de façon explicite dans la configuration Kubernetes, mais seront à coder dans les applications.**
 
 Cette section est terminée si vous accédez à votre application en utilisant l'URL `calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net` dans votre navigateur.
 
