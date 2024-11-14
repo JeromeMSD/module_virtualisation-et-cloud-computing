@@ -280,8 +280,8 @@ Via un nouveau conteneur, démarrez [**RabbitMQ**](https://rabbitmq.com/) qui se
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
 ```
 
-> [tip]
-> Si vous n'avez pas eu l'occasion d'essayer lors du TD sur la conteneurisation, Tester RabbitMQ avec le tutoriel suivant ! 👉 [ RabbitMQ Hello World ](https://rabbitmq.com/tutorials/tutorial-one-python.html)
+> [!tip]
+> Si vous n'avez pas eu l'occasion d'essayer lors du TD sur la conteneurisation, tester RabbitMQ avec le tutoriel suivant ! 👉 [ RabbitMQ Hello World ](https://rabbitmq.com/tutorials/tutorial-one-python.html)
 
 Comment la file d'attente doit être ajoutée à l'API: chaque fois que l'API reçoit le calcul à effectuer, elle crée un message avec opérateur et opérandes et le place dans la queue.
 **Un autre programme est donc à développer**, il sera chargé de consommer les messages. Pour chaque message, il réalisera le calcul et le stokera le resultat dans le redis.
