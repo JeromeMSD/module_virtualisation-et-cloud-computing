@@ -303,17 +303,22 @@ Conteneurisez les microservices `backend`, `frontend` et `consumer`.
 
 ```mermaid
 graph LR
-  wip["Disponible prochainement"]
+    user([Utilisateur]) -->|saisit une addition| F[Frontend]
+    F -->|"HTTP POST /api/addition"| B[Backend]
+    B -->|"{id, calcul à faire}"| Q[\ RabbitMQ /]
+    B -.->|HTTP 200 OK| F
+    C[Consumer] -->|"récupére le dernier message"| Q[\ RabbitMQ /]
+    C -->|"redis.set(id, resultat du calcul)"| R[(Redis DB)]
 ```
 
-### Exemple de fonctionnement pour demander le résultat une addition 
+### Exemple de fonctionnement pour demander un résultat
 
 ```mermaid
 graph LR
-    user([Utilisateur]) --> F[Frontend]
-    F -->|id de calcul| B[Backend]
+    user([Utilisateur]) -->|saisit id du calcul à récupérer| F[Frontend]
+    F -->|"HTTP GET /api/result/{id}"| B[Backend]
     B -->|"redis.get(id)"| R[(Redis DB)]
-    R -.->|"résultat (si disponible)"| B
+    R -.->|"résultat ou null"| B
     B -.->|HTTP 200 + Résultat| F
     B -.->|HTTP 404 Not Found| F
     F -.->|Affiche le résultat ou l'erreur| user
