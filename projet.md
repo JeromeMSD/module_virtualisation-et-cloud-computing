@@ -299,9 +299,25 @@ Créer un frontend qui permet à l’utilisateur de saisir et d’envoyer des de
 
 Conteneurisez les microservices `backend`, `frontend` et `consumer`.
 
-### Exemple de fonctionnement pour demander la réalisation une addition - TODO
+### Exemple de fonctionnement pour demander la réalisation une addition
 
-### Exemple de fonctionnement pour demander le résultat une addition - TODO
+```mermaid
+graph LR
+  wip["Disponible prochainement"]
+```
+
+### Exemple de fonctionnement pour demander le résultat une addition 
+
+```mermaid
+graph LR
+    user([Utilisateur]) --> F[Frontend]
+    F -->|id de calcul| B[Backend]
+    B -->|"redis.get(id)"| R[(Redis DB)]
+    R -.->|"résultat (si disponible)"| B
+    B -.->|HTTP 200 + Résultat| F
+    B -.->|HTTP 404 Not Found| F
+    F -.->|Affiche le résultat ou l'erreur| user
+```
 
 > [!NOTE]
 > Documentations pour la section:
