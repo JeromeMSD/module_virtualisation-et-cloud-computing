@@ -19,12 +19,10 @@ https://drive.google.com/drive/folders/1C1rkB3XSqVZ9dcGo7VAww7nxHoH5UJMn?usp=sha
 
 ## Travaux dirigés
 
-Les travaux dirigés seront consacré à la réalisation d'un seul sujet : [ INSERER UN SUJET de TD ICI ]!
-
-Et ça ce passe ici 👉 [TD](tds/README.md)
+Ça ce passe ici 👉 [TD](tds/README.md)
 
 ## Projet 🕹️
 
-Les travaux pratiques seront également consacré à la réalisation d'un seul projet : [ INSERER UN SUJET PROJET ICI ] !
+Les travaux pratiques seront également consacré à la réalisation d'un seul projet : une calculatrice Cloud Native !
 
 Et ça ce passe ici 👉 [Projet noté](projet.md)
