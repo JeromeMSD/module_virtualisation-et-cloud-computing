@@ -46,7 +46,7 @@ Pour vous connecter, réaliser la procédure suivantes dans un terminal :
 
     Do you want to continue (Y/n) ? **Y**
 
-4. Configurez l'outil `docker` pour pousser cet **Artifact Registry**
+4. Configurer l'outil `docker` pour pousser dans **Artifact Registry**.
 
     ```shell
     gcloud auth configure-docker europe-west1-docker.pkg.dev
@@ -66,9 +66,9 @@ europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-2024:nom1-nom
 europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/backend-2024:nom1-nom2
 ```
 
-## Et comment ça ce passe côté Kubernetes
+## Et comment ça ce passe côté Kubernetes ?
 
-Kubernetes est déjà authentifier pour recupéré des images depuis ce registre.
+Kubernetes est déjà authentifié pour recupérer des images depuis ce registre.
 
 Il suffit de fournir dans la configuration, l'adresse de l'image à récupérer dans le registre.
 
