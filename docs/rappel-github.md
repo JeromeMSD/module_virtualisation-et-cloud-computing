@@ -1,5 +1,7 @@
 # Github & Readme - RAPPEL
 
+Vos fichiers `README.md` peuvent être améliorés et plus lisible en utilisant les fonctionnalités suivantes.
+
 ## Titres & sections
 
 ```text
