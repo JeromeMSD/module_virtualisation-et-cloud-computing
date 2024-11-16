@@ -18,10 +18,10 @@
 ### Mise en forme de texte
 
 ```text
-Ce _projet_ a été réaliser via **Kubernetes** et l'outil `kubectl`.
+Ce _projet_ a été réalisé via **Kubernetes** et l'outil `kubectl`.
 ```
 
-Ce _projet_ a été réaliser via **Kubernetes** et l'outil `kubectl`.
+Ce _projet_ a été réalisé via **Kubernetes** et l'outil `kubectl`.
 
 ### Images & badges
 
