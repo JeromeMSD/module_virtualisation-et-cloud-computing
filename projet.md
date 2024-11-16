@@ -333,7 +333,6 @@ graph LR
 > **-** [RAPPEL Docker](/docs/rappel-docker.md)
 > **-** [RAPPEL GitHub & Readme](/docs/rappel-github.md)
 > **-** [RAPPEL HTTP/S et API](/docs/rappel-http.md)
-> **-** [RAPPEL Docker](/docs/rappel-docker.md)
 
 ---
 
