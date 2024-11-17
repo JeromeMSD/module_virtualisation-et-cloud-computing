@@ -136,7 +136,10 @@ graph LR
 Cette section est terminée si les commandes `terraform fmt`, `terraform validate` et `terraform plan` s'exécutent sans erreur dans le dossier `foundation`.
 
 > [!important]
-> Le résultat du terraform plan est à ajouter au README.md de ce même dossier.
+> Le résultat du `terraform plan` est à ajouter au README.md de ce même dossier.
+
+> [!caution]
+> L'API Terraform de Scaleway ne nécéssite pas d'authentification pour réaliser les commandes `terraform fmt`, `terraform validate` et `terraform plan`. Vous pouvez donc réaliser des commandes sans être connecté. **Vous n'avez pas besoin de vous créer un compte chez Scaleway pour réaliser cette section.**
 
 > [!NOTE]
 > [Documentation Terraform](https://developer.hashicorp.com/terraform/docs) **-** [Documentation Scaleway Terraform](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs) **-** [Documentation Scaleway](https://www.scaleway.com/en/docs/)
