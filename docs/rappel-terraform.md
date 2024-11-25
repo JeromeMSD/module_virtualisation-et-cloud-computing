@@ -82,3 +82,87 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 > ```shell
 > terraform import '<resource_type>.<resource_name>' <resource_id>
 > ```
+
+---
+
+## Terraform x Provider
+
+### Scaleway
+
+Le **provider Scaleway** se configure comme ceci :
+
+```hcl
+terraform {
+  required_providers {
+    scaleway = {
+      source = "scaleway/scaleway"
+      version = "2.47.0"
+    }
+  }
+}
+
+provider "scaleway" {}
+```
+
+Vous pouvez directement utiliser `terraform plan`, **ce provider ne nécessite pas d'authentification. 🚀**
+
+### Google
+
+Pour pouvoir effectuer le `terraform plan`, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
+Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la via l'environnement :
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="./student.json"
+echo "**/student.json" >> .gitignore
+```
+
+Le **provider Google** se configure comme ceci :
+```hcl
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "6.12.0"
+    }
+  }
+}
+
+provider "google" {
+  project = var.project_id
+  region  = var.region
+}
+```
+
+> [!warning]
+> Qui dit variable dit qu'il vous faudra forcement créer un fichier `variable.tf` et éventuellement un `terraform.tfvars` pour les valoriser.
+
+### AWS
+
+Pour pouvoir effectuer le `terraform plan`, vous aurez besoin d'un compte de service qui à accès à l'environment AWS.
+Ajouter les variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` et `AWS_REGION` au terminal qui execute les commandes Terraform. 
+
+```bash
+export AWS_ACCESS_KEY_ID="<access-key-id>"
+export AWS_SECRET_ACCESS_KEY="<access-key-secret>"
+export AWS_REGION="eu-west-3"
+```
+
+> [!warning]
+> `<access-key-id>` et `<access-key-secret>` sont à remplacer par les clés fournies.
+
+Le **provider AWS** se configure comme ceci :
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = var.region
+}
+```
