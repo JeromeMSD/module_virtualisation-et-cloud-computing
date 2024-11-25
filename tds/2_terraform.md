@@ -52,11 +52,15 @@ Utiliser [la documentation du provider](https://registry.terraform.io/providers/
 
 Dans un second dossier `foundation-aws`, déclarez la même IaC pour un déploiement chez AWS. Vous choisirez les ressources les plus adaptées dans la 
 
+***
+
 > [!important]
-> **Besoin d'un coup de main ?** retrouver les méthodes détaillées pour configurer les différents providers dans [le rappel Terraform](docs/rappel-terraform.md)
+> **Besoin d'un coup de main ?** retrouver les méthodes détaillées pour configurer les différents providers dans [le rappel sur Terraform](docs/rappel-terraform.md)
 
 > [!WARNING]
 > La commande `terraform validate` & `terraform plan` doit s'executer sans erreur. Le résultat du `terraform plan` est à ajouter au `README.md`
+
+***
 
 ## Créer un module pour chacun des deux providers 🚀
 
