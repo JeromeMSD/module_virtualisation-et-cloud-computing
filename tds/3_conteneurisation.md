@@ -139,31 +139,46 @@ Pour pousser une image dans un registre **Artifact Registry**, il vous faut:
 
 Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de votre image.
 
-1. Commencer par installer [gcloud](https://cloud.google.com/sdk/docs/install?hl=fr).
-2. Authentifier la CLI avec la clé du compte de service que je vous fournis et la commande suivante :
+0. Commencer par installer [gcloud](https://cloud.google.com/sdk/docs/install?hl=fr).
+1. Initialiser `gcloud`
 
     ```shell
-    gcloud auth activate-service-account student@esirem.iam.gserviceaccount.com --project=esirem --key-file=/chemin/vers/la/clé.json 
+    gcloud init
     ```
 
-3. Configurer `docker` directement avec `gcloud` :
+    Aux question posées, répondez :
+    * Pick a configuration to use :  **[1] Re-initialize this configuration (default) with new settings**
+    * Select an account : **Skip this step**
+
+2. S'authentifier
+
+    ```shell
+    gcloud auth login
+    ```
+
+    Connectez-vous avec l'adresse email Google que vous aviez saisie dans le Google Sheet
+
+3. Configurer le projet `polytech-dijon`
+
+    ```shell
+    gcloud config set project polytech-dijon
+    ```
+
+    Do you want to continue (Y/n) ? **Y**
+
+4. Configurer l'outil `docker` pour pousser dans **Artifact Registry**.
 
     ```shell
     gcloud auth configure-docker europe-west1-docker.pkg.dev
     ```
 
-4. Maintenant que vous êtes authentifié, rendez-vous dans le dossier frontend.
-5. Construiser l'image du frontend via `docker build` avec le tag `europe-west1-docker.pkg.dev/esirem/esirem/td:nom1-nom2`
+**Vous pouvez maintenant pousser les images.** Utiliser les tags adaptés pour faire fonctionner la commande `docker push`
 
-   ```shell
-    docker build . -t europe-west1-docker.pkg.dev/esirem/esirem/frontend-2024:nom1-nom2
-   ```
+###### Exemple pour le frontend
 
-6. Pousser l'image construite.
-
-    ```shell
-    docker push europe-west1-docker.pkg.dev/esirem/esirem/frontend-2024:nom1-nom2
-    ```
+```shell
+europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-2024:nom1-nom2
+```
 
 > [!note]
 > Les commandes doivent être executé dans le même terminal.
