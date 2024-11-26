@@ -20,7 +20,7 @@ Ces commandes principales vous permettrons de manipuler et tester votre state to
 | Commandes_terraform |  Description |
 | ------------------ | ------------ |
 | `terraform init`     | Initialise un répertoire contenant des fichiers de configuration Terraform. Cette commande télécharge les plugins nécessaires pour les fournisseurs d'infrastructure spécifiés dans les configurations.
-| `terraform vaidate`  | Vérifie la syntaxe et la validité des fichiers de configuration Terraform dans le répertoire actuel.
+| `terraform validate`  | Vérifie la syntaxe et la validité des fichiers de configuration Terraform dans le répertoire actuel.
 | `terraform fmt`      | Formate les fichiers de configuration Terraform selon les conventions standard, améliore la lisibilité et la cohérence.
 
 #### Commandes de Planification et d'Application
