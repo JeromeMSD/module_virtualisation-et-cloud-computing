@@ -15,7 +15,7 @@ Pour installer `kubectl`, suivez [les instructions d'installation](https://kuber
 
 Vous trouverez [ici](https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/), un récapitulatif des commandes et actions possible avec cet outil.
 
-## Connexion au cluster
+### Connexion au cluster
 
 Un cluster Kubernetes a été mis à votre disposition pour ce module. Utiliser le fichier fourni via le channel Teams du module pour vous y connecter.
 
@@ -53,7 +53,7 @@ Un cluster Kubernetes a été mis à votre disposition pour ce module. Utiliser 
 >
 > *Alternative :* On peut également passer un fichier `config` à `kubectl` directement via l'option `--kubeconfig`.
 
-## Manipuler les ressources du cluster
+### Manipuler les ressources du cluster
 
 Vous pouvez effectuer des actions dans l'environnement Kubernetes, vous disposez de plusieurs commandes à
 
@@ -79,7 +79,7 @@ kubectl delete -f mon-fichier.yaml                  # Supprime la ou les instanc
 > [!tip]
 > Utilisez `kubectl <command> --help` pour plus d'information sur une commande.
 
-## Debugger avec `kubectl`
+### Debugger avec `kubectl`
 
 Pour effectuer des actions de debug, voici quelques exemples :
 
@@ -96,3 +96,8 @@ kubectl port-forward <nom-du-pod> <port-hote>:<port-pod>                # Créer
 kubectl port-forward svc/<nom-du-service> <port-hote>:<port-service>    # Créer un tunnel http entre le port <port-hote> de votre machine et le <port-service> du service <nom-du-service>
 kubectl cp <nom-du-pod>:<chemin/vers/fichier> <chemin/destination>      # Copie des fichiers du pod vers votre machine
 ```
+
+## Hiérarchie des objects dans Kubernetes
+
+> [!important]
+> Toutes les questions sur Kubernetes, son fonctionnement et ses concepts trouvent une réponse dans la [documentation de Kubernetes](https://kubernetes.io/docs/home/) (utilisez la barre de recherche à gauche).
