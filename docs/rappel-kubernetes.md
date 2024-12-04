@@ -1,6 +1,6 @@
 # Kubernetes - RAPPEL
 
-Kubernetes, c'est le Linux des systèmes distribués, il permet abstraire les machines physiques pour créer une platforme qui permet l'exécution d'applications conteneurisées.
+Kubernetes, c'est le Linux des systèmes distribués, il permet d'abstraire les machines physiques pour créer une platforme pour exécuter des applications conteneurisées.
 
 Pour permettre de manipuler les applications, Kubernetes met à votre disposition des ressources avec différents comportements et des fonctionnalités (Pod, Deployment, Service, etc.).
 
@@ -98,6 +98,8 @@ kubectl cp <nom-du-pod>:<chemin/vers/fichier> <chemin/destination>      # Copie 
 ```
 
 ## Hiérarchie des objects dans Kubernetes
+
+![Resources hierarchy](https://supports.uptime-formation.fr/images/kubernetes/k8s_objects_hierarchy.png?width=600px)
 
 > [!important]
 > Toutes les questions sur Kubernetes, son fonctionnement et ses concepts trouvent une réponse dans la [documentation de Kubernetes](https://kubernetes.io/docs/home/) (utilisez la barre de recherche à gauche).
