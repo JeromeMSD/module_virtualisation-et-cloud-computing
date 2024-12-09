@@ -1,6 +1,6 @@
 # Exigences pour le projet
 
-Ce projet à rendre au plus tard le `16 décembre 2024 à 23h59`.
+Ce projet à rendre au plus tard **2 semaines après votre dernière scéance de TP.**
 
 > [!WARNING]
 > À partir de cette date, aucune modification de votre dépôt ou de son code ne sera prise en compte.
