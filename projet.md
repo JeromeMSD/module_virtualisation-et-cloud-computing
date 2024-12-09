@@ -152,7 +152,7 @@ Utilisez Kubernetes pour déployer votre application au sein d'un namespace `nom
 
 1. Pour chaque *microservice*, déclarez un [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) et un [Service](https://kubernetes.io/fr/docs/concepts/services-networking/service/) pour exposer le conteneur de ce dernier.
 2. Passer en variable environnement les variables permettant la connexion entre les services qui doivent l'être.
-3. Exposer le service frontend via une règle [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) pour le nom de domaine défini dans la section [Fondation](#fondation).
+3. Exposer le service frontend et le backend via une règle [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) pour le nom de domaine défini dans la section [Fondation](#fondation).
 
 Une fois la configuration déployée, accéder à votre nom de domaine via un navigateur doit vous permettre d'utiliser la calculatrice.
 
