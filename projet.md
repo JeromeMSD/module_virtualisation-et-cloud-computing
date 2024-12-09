@@ -186,8 +186,8 @@ Une fois la configuration déployée, accéder à votre nom de domaine via un na
     pod-consumer -.-> svc-redis
     pod-api -.-> svc-redis
     pod-api -.-> svc-rabbitmq
-    ing --> svc-api
-    ing(Ingress NGINX rules) --> svc-front
+    ing -->|"${VOTRE_URL}/api"| svc-api
+    ing(Ingress NGINX rules) -->|"${VOTRE_URL}/"| svc-front
     svc-front([svc-front]) --> pod-front
     end
     end
