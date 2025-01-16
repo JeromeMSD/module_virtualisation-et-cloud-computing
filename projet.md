@@ -154,6 +154,11 @@ Utilisez Kubernetes pour déployer votre application au sein d'un namespace `nom
 2. Passer en variable environnement les variables permettant la connexion entre les services qui doivent l'être.
 3. Exposer le service frontend et le backend via une règle [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) pour le nom de domaine défini dans la section [Fondation](#fondation).
 
+> [!caution]
+> **Vous n'avez pas besion de déployer d'Ingress Controller !** Il est déjà présent au sein du cluster.
+>
+> Créer uniquement un objet de `kind: Ingress` pour lequel l'attribut `ingressClassName` vaut `nginx`.
+
 Une fois la configuration déployée, accéder à votre nom de domaine via un navigateur doit vous permettre d'utiliser la calculatrice.
 
 **Schema récapitulatif**
