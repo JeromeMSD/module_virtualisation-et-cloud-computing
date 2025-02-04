@@ -98,8 +98,8 @@ En utilisant le provider Terraform de [Scaleway](https://registry.terraform.io/p
 * Un **registre** de conteneur.
 * Un cluster **Kubernetes**.
 * Une base de données de `development` et de `production`.
-* Une **entrée DNS** pour `calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net` pour résoudre l'IP d'un des **LoadBalancers**.
-* Une **entrée DNS** pour `calculatrice-dev-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net` pour résoudre l'IP d'une des **LoadBalancers**.
+* Une **entrée DNS** pour `calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net` pour résoudre l'IP d'un des **LoadBalancers**.
+* Une **entrée DNS** pour `calculatrice-dev-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net` pour résoudre l'IP d'une des **LoadBalancers**.
 * Un **LoadBalancer** de `development` et un **LoadBalancer** de `production`.
 
 > Stocker les fichiers dans le dossier `foundation`
@@ -208,19 +208,19 @@ Une fois la configuration déployée, accéder à votre nom de domaine via un na
 
 **Les liens en pointillés ne sont pas à décrire de façon explicite dans la configuration Kubernetes, mais seront à coder dans les applications.**
 
-Cette section est terminée si vous accédez à votre application en utilisant l'URL `calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net` dans votre navigateur.
+Cette section est terminée si vous accédez à votre application en utilisant l'URL `calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net` dans votre navigateur.
 
 > [!tip]
 > Tester l'accès externe en ajoutant votre nom DNS au fichier hosts ! 🚀
 > 
 > **Linux & MacOS -** Exécuter la commande suivante avec votre URL.
 > ```
-> sudo echo "34.77.144.136 calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net" >> /etc/hosts
+> sudo echo "34.77.144.136 calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net" >> /etc/hosts
 > ```
 > **Windows -**
 > Ouvrer le fichier `C:\Windows\System32\drivers\etc\hosts` avec un éditeur de texte et ajouter à la fin du fichier la ligne suivante avec votre URL.
 > ```
-> 34.77.144.136 calculatrice-<nombinome1>-<nombinome2>-polytech-dijon.kiowy.net
+> 34.77.144.136 calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net
 > ```
 
 
