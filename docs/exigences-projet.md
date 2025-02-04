@@ -1,6 +1,6 @@
 # Exigences pour le projet
 
-Ce projet à rendre au plus tard **2 semaines après votre dernière scéance de TP.**
+Ce projet à rendre au plus tard pour les TP1 ILIA le `16 Janvier 2025 à 23h59` et `14 Fevrier 2025 à 23h59` pour les autres groupes.
 
 > [!WARNING]
 > À partir de cette date, aucune modification de votre dépôt ou de son code ne sera prise en compte.
