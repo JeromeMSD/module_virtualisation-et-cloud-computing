@@ -188,5 +188,5 @@ Pour tenter l'expérience, voici quelques liens utiles:
 * https://opensource.com/article/18/5/dual-boot-linux
 
 > [!caution]
-> [@JeromeMSD](https://github.com/JeromeMSD) ne pourra être tenu responsable de l'état de vos machines suite à la réalisation d'un **Dual Boot**.
-> Vos données et/ou des ressources sont sous votre entière responsabilité
+> Le référant de TD/TP ne pourra être tenu responsable de l'état de vos machines suite à la réalisation d'un **Dual Boot**.
+> Vos données et vos ressources sont sous votre entière responsabilité
