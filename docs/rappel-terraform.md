@@ -108,7 +108,7 @@ Vous pouvez directement utiliser `terraform plan`, **ce provider ne nécessite p
 
 ### Google
 
-Pour pouvoir effectuer le `terraform plan`, vous aurez besoin d'un compte de service qui à accès au projet GCP `esirem`.
+Pour pouvoir effectuer le `terraform plan`, vous pourrez avoir besoin d'un compte de service qui à accès au projet GCP `esirem`.
 Une fois la clé JSON de ce compte récupérée et ajoutée au dossier sous le nom `student.json`, ajouter la via l'environnement :
 
 ```
@@ -138,7 +138,7 @@ provider "google" {
 
 ### AWS
 
-Pour pouvoir effectuer le `terraform plan`, vous aurez besoin d'un compte de service qui à accès à l'environment AWS.
+Pour pouvoir effectuer le `terraform plan`, vous pourrez avoir besoin d'un compte de service qui à accès à l'environment AWS.
 Ajouter les variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` et `AWS_REGION` au terminal qui execute les commandes Terraform. 
 
 ```bash
