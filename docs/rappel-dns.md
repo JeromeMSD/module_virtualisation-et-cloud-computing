@@ -3,7 +3,7 @@
 Le **Domain Name System (DNS)** est un système distribué qui permet de faire la correspondance entre des noms de domaine (ex. `esirem.u-bourgogne.fr`) en adresses IP (ex. `193.52.234.14`). 
 C'est un des composants clés du fonctionnement d'internet (souvent responsable d'incident majeur)
 
-![It's always DNS](https://itsfoss.community/uploads/default/optimized/2X/a/ad3e17ff0a5a13b9c6f48716e7d35f965ec8137d_2_1024x1024.jpeg) | ![It was DNS](https://www.cscdbs.com/blog/wp-content/uploads/2021/05/Its-always-DNS-06-SSBroski.jpg)
+![It's always DNS](https://itsfoss.community/uploads/default/optimized/2X/a/ad3e17ff0a5a13b9c6f48716e7d35f965ec8137d_2_1024x1024.jpeg) | <img width="570" height="346" alt="image" src="https://github.com/user-attachments/assets/1e006b3b-949f-4f05-b36d-0b033a324e9f" />
 |---|---|
 
 ## Résolution DNS
