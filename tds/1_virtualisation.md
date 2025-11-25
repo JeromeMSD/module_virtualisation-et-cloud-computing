@@ -17,13 +17,13 @@ L'objectif sera de créer sur votre machine une VM [Ubuntu](https://ubuntu.com/)
 
 > [!tip]
 > **Déjà une machine Ubuntu ?** Utilisez un ISO de windows ou celui d'une autre distribution Linux :
-> 
+>
 > [ISO Windows](https://www.microsoft.com/FR-FR/software-download/windows10ISO)
 > ou
 > [ISO Elementary](https://elementary.io/docs/installation#installation)
 
 1. Dans VirtualBox, créer une nouvelle machine virtuelle.
-    Ubuntu nécessite [les caracteristiques suivantes](https://ubuntu.com/download/desktop#system-requirements) pour fonctionner correctement:
+   Ubuntu nécessite [les caracteristiques suivantes](https://ubuntu.com/download/desktop#system-requirements) pour fonctionner correctement:
     * 2 GHz de puissance de calcul.
     * 4 GB de RAM.
     * 25 GB de stockage.
@@ -45,7 +45,7 @@ L'objectif sera de créer sur votre machine une VM [Ubuntu](https://ubuntu.com/)
 ### Créer votre première VM Windows
 
 1. Dans VirtualBox, créer une nouvelle machine virtuelle.
-    Windows 11 nécessite [les caracteristiques suivantes](https://www.microsoft.com/en-us/windows/windows-11-specifications) pour fonctionner correctement:
+   Windows 11 nécessite [les caracteristiques suivantes](https://www.microsoft.com/en-us/windows/windows-11-specifications) pour fonctionner correctement:
     * 1 GHz de puissance de calcul.
     * 4 GB de RAM.
     * 64 GB de stockage.
@@ -66,7 +66,7 @@ Connectez-vous avec les identifiants définis précédemment et essayez les comm
 > Par défault le clavier est en [QWERTY](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1JrzRDzXo_nKM5gJI78-K5Es5MQL5GkbCw&s), ce qui est modifiable **après** la première connexion.
 >
 > 💬 - *je vous avais dis que vous me remercieriez :)*
-> 
+>
 > Un petit coup de pouce :
 >
 > ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1JrzRDzXo_nKM5gJI78-K5Es5MQL5GkbCw&s)
@@ -110,8 +110,21 @@ ifconfig
 ping esirem.u-bourgogne.fr
 ```
 
+> [!tip]
+> **Parenthèse** - (
+>
+> Vous avez remarquez le nom du serveur qui répond ? Cherchons plus d'informations.
+>
+> ```shell
+> dig esirem.u-bourgogne.fr
+> ```
+>
+> Qu'est ce que vous comprenez ? (cf. [rappel HTTP](../docs/rappel-dns.md))
+> 
+> )
+
 ```shell
-curl wttr.in
+curl wttr.in/Moon
 ```
 
 **Que pouvez-vous observer sur cet environnement ?**
