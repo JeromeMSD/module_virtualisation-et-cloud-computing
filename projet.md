@@ -210,20 +210,6 @@ Une fois la configuration déployée, accéder à votre nom de domaine via un na
 
 Cette section est terminée si vous accédez à votre application en utilisant l'URL `calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net` dans votre navigateur.
 
-> [!tip]
-> Tester l'accès externe en ajoutant votre nom DNS au fichier hosts ! 🚀
-> 
-> **Linux & MacOS -** Exécuter la commande suivante avec votre URL.
-> ```
-> sudo echo "34.77.144.136 calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net" >> /etc/hosts
-> ```
-> **Windows -**
-> Ouvrer le fichier `C:\Windows\System32\drivers\etc\hosts` avec un éditeur de texte et ajouter à la fin du fichier la ligne suivante avec votre URL.
-> ```
-> 34.77.144.136 calculatrice-<nombinome1>-<nombinome2>.polytech-dijon.kiowy.net
-> ```
-
-
 > [!NOTE]
 > Documentations pour la section:
 > [Kubernetes](https://kubernetes.io/docs/home/)
@@ -367,3 +353,4 @@ graph LR
 ---
 
 ### [Exigences pour le projet 👈](docs/exigences-projet.md)
+
