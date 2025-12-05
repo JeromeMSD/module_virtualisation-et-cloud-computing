@@ -2,7 +2,7 @@
 # EXAMEN PRATIQUE - ILIA-SQR - Virtualisation & Cloud Computing
 
 > [!WARNING]
-> Ce projet est à rendre au plus tard pour les TP1 ILIA le `16 Janvier 2025 à 23h59` et `14 Fevrier 2025 à 23h59` pour les autres groupes.
+> Ce projet est à rendre au plus tard pour le `3 Fevrier 2026 à 23h59`.
 
 Sommaire
 ---
@@ -353,4 +353,5 @@ graph LR
 ---
 
 ### [Exigences pour le projet 👈](docs/exigences-projet.md)
+
 
