@@ -2,7 +2,7 @@
 # EXAMEN PRATIQUE - ILIA-SQR - Virtualisation & Cloud Computing
 
 > [!WARNING]
-> Ce projet est à rendre au plus tard pour le `3 Fevrier 2026 à 23h59`.
+> Ce projet est à rendre au plus tard le `3 Fevrier 2026 à 23h59`.
 
 Sommaire
 ---
@@ -353,5 +353,6 @@ graph LR
 ---
 
 ### [Exigences pour le projet 👈](docs/exigences-projet.md)
+
 
 
