@@ -139,26 +139,13 @@ Pour pousser une image dans un registre **Artifact Registry**, il vous faut:
 
 Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de votre image.
 
-0. Commencer par installer [gcloud](https://cloud.google.com/sdk/docs/install?hl=fr).
-1. Initialiser `gcloud`
-
+0. Commencer, si ce n'est pas déjà fait, par installer [gcloud](https://cloud.google.com/sdk/docs/install?hl=fr).
+1. Nous allons utiliser [le même identifiant que pour le TD sur Terraform](../docs/rappel-terraform.md#google), pour l'utiliser dans ce mode nous devons d'abord l'ajouter à gcloud via la commande suivante : 
     ```shell
-    gcloud init
+    gcloud auth activate-service-account student@polytech-dijon.iam.gserviceaccount.com --key-file="./student.json"
     ```
 
-    Aux question posées, répondez :
-    * Pick a configuration to use :  **[1] Re-initialize this configuration (default) with new settings**
-    * Select an account : **Skip this step**
-
-2. S'authentifier
-
-    ```shell
-    gcloud auth login
-    ```
-
-    Connectez-vous avec l'adresse email Google que vous aviez saisie dans le Google Sheet
-
-3. Configurer le projet `polytech-dijon`
+2. Configurer le projet `polytech-dijon`
 
     ```shell
     gcloud config set project polytech-dijon
@@ -166,7 +153,7 @@ Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de v
 
     Do you want to continue (Y/n) ? **Y**
 
-4. Configurer l'outil `docker` pour pousser dans **Artifact Registry**.
+3. Configurer l'outil `docker` à partir de la configuration `gcloud` pour pousser dans **Artifact Registry**.
 
     ```shell
     gcloud auth configure-docker europe-west1-docker.pkg.dev
@@ -174,10 +161,17 @@ Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de v
 
 **Vous pouvez maintenant pousser les images.** Utiliser les tags adaptés pour faire fonctionner la commande `docker push`
 
+> [!important]
+> Quant vous utiliser des registres SaaS, le tag de l'image doit contenir: 
+> * Les informations liés au founisseur, dans notre cas `<region>-<type-de-registre>.pkg.dev/<projet-gcp>`
+> * Le nom du registre, ici `polytech-dijon`
+> * Et enfin le nom de l'image suivi de son tag: `<image>:<tag>`
+> Ce qui pourrait donner, une fois concaténé: `europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/mon-app:1.0.0`
+
 ###### Exemple pour le frontend
 
 ```shell
-europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-2024:nom1-nom2
+europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-2026:nom1-nom2
 ```
 
 > [!note]
