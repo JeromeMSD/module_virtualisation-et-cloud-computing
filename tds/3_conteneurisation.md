@@ -139,7 +139,7 @@ Pour pousser une image dans un registre **Artifact Registry**, il vous faut:
 
 Le registre est déjà créé. Il ne vous reste que la connexion et l'envoi de votre image.
 
-0. Commencer, si ce n'est pas déjà fait, par installer [gcloud](https://cloud.google.com/sdk/docs/install?hl=fr).
+0. Commencer, si ce n'est pas déjà fait, par installer [gcloud](https://docs.cloud.google.com/sdk/docs/install-sdk?hl=fr#latest-version).
 1. Nous allons utiliser [le même identifiant que pour le TD sur Terraform](../docs/rappel-terraform.md#google), pour l'utiliser dans ce mode nous devons d'abord l'ajouter à gcloud via la commande suivante : 
     ```shell
     gcloud auth activate-service-account student@polytech-dijon.iam.gserviceaccount.com --key-file="./student.json"
