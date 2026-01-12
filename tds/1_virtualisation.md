@@ -58,7 +58,7 @@ L'objectif sera de créer sur votre machine une VM [Ubuntu](https://ubuntu.com/)
 
 ### VM Linux
 
-Bienvenue sur votre machine virtuel ! 🚀
+Bienvenue sur votre machine virtuelle! 🚀
 
 Connectez-vous avec les identifiants définis précédemment et essayez les commandes suivantes
 
